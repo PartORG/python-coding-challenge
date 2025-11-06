@@ -1,23 +1,33 @@
-# In this script you can write your code.
-# Start by writing all the functions.
-# In the last part after if __name__ == "__main__": you can call the functions to play your game.
-# If you run `python tic_tac_toe.py` in the command line the game will start. Try it out! ;)
+import board as b
+import player as pl 
+import logic
 
-# Function for ... (displaying the board?)
-def blabla():
-    pass
+def main():
+    board = b.create_empty_board()
+    player = "x"
 
+    while True:
+        b.show_board(board)
+        move = pl.get_move(board, player)
 
-# Function for... (choosing a player?)
-def blablabla():
-    pass
+        if pl.check_valid_move(board, move):
+            b.make_move(board, player, move)
 
+            if logic.check_win(board, player):
+                b.show_board(board)
+                print(f"Player {player} wins!")
+                break
 
-# ... write as many functions as you need
+            elif logic.check_draw(board):
+                b.show_board(board)
+                print("It's a draw!")
+                break
+
+            player = pl.switch_player(player)
+        else:
+            print("Invalid move. Choose a different field.")
 
 
 # Tic-tac-toe game
 if __name__ == "__main__":
-
-    # Start a new round of Tic-tac-toe
-    print("Welcome to a new round of Tic-Tac-Toe!")
+    main()

@@ -3,7 +3,7 @@ def get_move(b, player):
        player = current player
        returns the chosen field as int
     """
-    chosen_field = int(input("Enter a field number from 1 - 9: ")) - 1 
+    chosen_field = int(input(f"Player {player}, Enter a field number from 1 - 9: ")) - 1
     # -1 to have the right index for the board list
     return chosen_field
 
