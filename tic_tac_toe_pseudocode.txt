@@ -42,3 +42,42 @@ WHILE playing game true
 
          
     
+Task Discussion for the afternoon
+def create_empty_board():      ##function for creating empty boards
+    return [" "]*9
+
+def show_board(b):
+    print(f"{b[0]}|{b[1]}|{b[2]}\n-+-+-\n{b[3]}|{b[4]}|{b[5]}\n-+-+-\n{b[6]}|{b[7]}|{b[8]}")
+
+def make_move(b, player, field):        
+    #takes three parameters: board status, player and chosen field
+    #Puts the current player symbol into the chosen field (updates board)
+
+def get_move(b, player):
+    #input from player choose field 1-9
+    #return chosen_field in a string as a int
+
+def check_valued_move(b, chosen_field):
+    #if the chosen_field not occupied, then you put position into the board
+    #return the boolean
+
+def check_win(b, player):
+    #create a list of lists of winning combinations
+    #checking if current board state is in the list of winning combinations
+    #return boolean
+
+def check_draw(b, player):
+    #check if board is full
+    #then if it is not win, then it=draw
+    #then return boolean
+
+def switch_player(current_player):
+    #it switches the player from current player to another
+
+def main():
+    #includes all other functions above
+    #follows the pseudocodes
+
+    
+
+
