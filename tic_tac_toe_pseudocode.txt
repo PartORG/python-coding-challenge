@@ -1,0 +1,44 @@
+Bulletpoints of the games in steps:
+1. Initialize an empty board
+2. Initialize the first player
+3. Initialize the second player
+4. Use specifically a while loop since we don't know how many iterations we are going to have
+5. Initialize the loop (start the game)
+6. Draw a board
+7. Ask a player to make a move (choose a field)
+8. Check the field (empty or not)
+9. If the field is empty, then we put the symbol of the player into the field
+10. Check if player wins
+11. End game
+12. Output: "player wins"
+13. Check if draw
+14. Ouput: "it is a draw"
+15. Switch to another player
+16. If the field is occupied, output: "choose a different field"
+
+
+
+Tic Tac Toe Pseudocode
+STORE empty board
+STORE first player
+STORE second player
+WHILE playing game true 
+    OUTPUT board
+    INPUT first player's move
+    STORE chosen field
+    IF chosen field NOT occupied THEN 
+        STORE first player symbol into the chosen field
+        IF first player wins THEN
+            OUTPUT board
+            OUTPUT player wins
+            BREAK endgame
+        ELSE 
+            OUTPUT draw
+            OUTPUT it is a draw
+            BREAK endgame
+        switch to the second player
+    ELSE
+        OUTPUT choose a different field
+
+         
+    
