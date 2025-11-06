@@ -79,5 +79,37 @@ def main():
     #follows the pseudocodes
 
     
+Divide to 3 files:
+1) board.py: - all functionality to create, change, update the board
+def create_empty_board():      ##function for creating empty boards
+    return [" "]*9
 
+def show_board(b):
+    print(f"{b[0]}|{b[1]}|{b[2]}\n-+-+-\n{b[3]}|{b[4]}|{b[5]}\n-+-+-\n{b[6]}|{b[7]}|{b[8]}")
 
+def make_move(b, player, field): (Leya)       
+    #takes three parameters: board status, player and chosen field
+    #Puts the current player symbol into the chosen field (updates board)
+
+2) player.py: - applied for a player functionality
+def get_move(b, player): (Dat)
+    #input from player choose field 1-9
+    #return chosen_field in a string as a int
+
+def check_valid_move(b, chosen_field): (Dat)
+    #if the chosen_field not occupied, then you put position into the board
+    #return the boolean
+
+def switch_player(current_player): (Leya)
+    #it switches the player from current player to another
+
+3) logic.py: - have functions to be used in main logic function
+def check_win(b, player): (Ievgen)
+    #create a list of lists of winning combinations
+    #checking if current board state is in the list of winning combinations
+    #return boolean
+
+def check_draw(b, player): (Ievgen)
+    #check if board is full
+    #then if it is not win, then it=draw
+    #then return boolean
